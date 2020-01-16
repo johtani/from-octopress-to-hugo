@@ -35,7 +35,7 @@ def copy_and_convert_files(original_folder, target_folder):
             os.makedirs(target_folder + "post/" + year)
         # move file to folder
         #shutil.copy(file, target_folder + year + "/" + file_name)
-        convert_file_to_hugo(file, target_folder + "post/" + year + "/" + file_name)
+        convert_file_to_hugo(file, target_folder + "post/" + year + "/" + file_name.replace(".markdown", ".md"))
         #break
 
 def convert_file_to_hugo(original_file, target_file):
